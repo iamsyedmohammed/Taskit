@@ -1,0 +1,66 @@
+#container{
+    border: 3px solid black;
+    /* padding: 20px; */
+    margin: 50px;
+    height: 300px;
+    width: 500px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    overflow: auto;
+    
+    
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+body{
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Ensure body takes full height */
+    overflow: hidden;
+}
+
+.btn{
+display: flex;
+gap: 20px;
+margin-top: 25px;
+}
+
+#input_field{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 450px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px;
+    border: none;
+}
+
+.btn1{
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+.btnn3{
+    margin-bottom: 40px;
+}
