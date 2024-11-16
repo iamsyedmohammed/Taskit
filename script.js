@@ -4,15 +4,25 @@ function addelement(){
     let task=input_text.value;
     
 
+
+
     if(task.trim()!==""){
         let new_task=document.createElement("ul");
         new_task.innerText=task;
         
         new_task.style.border="2px"
 
-
+        new_task.addEventListener("keyup",(event)=>{
+            if(event.key==="Enter"){
+                let newTask=document.createElement("div");
+                newTask.textContent=new_task.value;
+                taskContainer.appendChild(newTask)
+                new_task.value = "";
+            }
+            
+        })
     let wrapper=document.createElement("div");
-    wrapper.style.display="block";
+    wrapper.style.display="inline-flex";
     wrapper.style.position="relative";
 
     wrapper.style.border="1px solid black"
@@ -96,7 +106,9 @@ function addelement(){
     }
     
     input_text.value="";
+
 }
+    
 
 
 
@@ -126,3 +138,23 @@ function removeelement(){
 // URL.revokeObjectURL(link.href);
 
 // }
+
+
+
+
+// document.querySelector("#input_field").addEventListener("keyup", function(event) {
+//     if (event.key === "Enter") {
+//         addelement(); // Call the addelement function when Enter is pressed
+//     }
+// });
+
+// }
+
+
+let enterButton=document.querySelector("#input_field");
+enterButton.addEventListener("keyup",(event)=>{
+    if(event.key==="Enter"){
+        addelement();
+    }
+    
+});
