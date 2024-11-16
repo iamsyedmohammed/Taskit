@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="mainContainer">
     <div class="title"> Task Your Way Up &#11014;  </div>
+    <div class="">
     <input id="input_field" type="text" placeholder="Enter Your Tasks">
     <div class="btn">
     <button class="btn1 " onclick="addelement()">Add the Task &#43;</button>
     <button class="btn1" onclick="removeelement()">Remove Task &#8722;</button>
     </div>
-    <div id="container"></div>
-    <button class="btn1 btnn3" onclick="removeall()">Clear All</button>
-    <button class="btn1 btnn3" onclick="saveall()">Save Task</button>
+    <div class="tasksContainer">
+        <div id="newTaskcontainer">New Tasks</div>
 
+        <div id="doneTaskcontainer" >Completed Tasks</div>
+    </div>
+    <!-- <button class="btn1 btnn3" onclick="removeall()">Clear All</button>
+    <button class="btn1 btnn3" onclick="saveall()">Save Task</button> -->
+    </div>
  <script src="script.js"></script>   
 </body>
 </html>
