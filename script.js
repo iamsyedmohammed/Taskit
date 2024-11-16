@@ -18,12 +18,18 @@ function addelement(){
     wrapper.style.border="1px solid black"
     wrapper.style.borderRadius="5px"
     wrapper.style.marginTop="10px"
-    wrapper.style.width="300px"
+    wrapper.style.width="auto"
+    wrapper.style.height="auto";
     wrapper.style.marginLeft="10px"
     wrapper.style.marginRight="10px"
+    wrapper.style.marginTop="30px"
     wrapper.style.transition="transform 0.3s linear, background-color 0.3s linear"
     wrapper.style.transform="scale(1)";
     wrapper.style.cursor="pointer";
+    
+    wrapper.style.background= "linear-gradient(to right, #fc5c7d, #6a82fb)";
+    
+    // wrapper.style.zIndex="-5"
 
     document.body.appendChild(wrapper);
     wrapper.addEventListener("mouseover",()=>{
@@ -43,7 +49,7 @@ function addelement(){
     finishButton.style.backgroundColor="blue";
     finishButton.style.color="white";
     finishButton.style.position="absolute";
-    finishButton.style.top="14px";
+    finishButton.style.top="17px";
     finishButton.style.left="10px"
     finishButton.style.cursor="pointer";
     finishButton.style.border="none";
@@ -53,9 +59,16 @@ function addelement(){
     finishButton.addEventListener("click",()=>{
         // let clonedWrapper=wrapper.cloneNode(true);
         let buttons=wrapper.querySelectorAll("button");
+        // buttons.style.transform="scale(1)"
         buttons.forEach((element) => element.remove());
-        target_div.appendChild(wrapper)
+        
+        target_div.prepend(wrapper)
     })
+
+    // finishButton.addEventListener("click",()=>{
+    //     let buttons=wrapper.querySelectorAll("button")
+    //     buttons.forEach((buttons)=>buttons.style.transform="scale(1)")
+    // })
     
 
     let remove_Btn=document.createElement("button");
@@ -64,7 +77,7 @@ function addelement(){
     remove_Btn.style.backgroundColor="red";
     remove_Btn.style.position="absolute";
     remove_Btn.style.left="130px";
-    remove_Btn.style.top="14px"
+    remove_Btn.style.top="17px"
     // remove_Btn.style.right="30px"
     remove_Btn.style.cursor="pointer";
     remove_Btn.style.border="none";
